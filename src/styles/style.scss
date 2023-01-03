@@ -1,0 +1,179 @@
+@use 'font';
+
+:root {
+    background-color: #9789F9;
+    color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    height: auto;
+    margin: 120px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    max-width: 370px;
+    width: 100%;
+    background-color: #F5F3F9;
+    position: relative;
+    background-image: url(../src/img/bg-image.png);
+    background-repeat: no-repeat;
+    background-position: bottom 57px center;
+    -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+    margin-bottom: 100px;
+    z-index: 0;
+
+    .button {
+        text-align: center;
+    }
+
+    .card__badge, .card__tooltip {
+        display: none;
+    }
+}
+
+.card__header {
+    text-align: center;
+    margin-bottom: 70px;
+    padding-top: 40px;
+}
+
+.card__text {
+    font-family: 'Bebas Neue Thin';
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+
+    &::before {
+        content: "$";
+        font-size: 24px;
+        line-height: 28px;
+        color: #181818;
+        vertical-align: top;
+    }
+
+    &::after {
+        content: "/hr";
+        font-family: 'Bebas Neue Book';
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+}
+
+.card__title {
+    font-family: 'Bebas Neue Book';
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.card__sevices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 117px;
+
+    .card__img {
+        margin-bottom: 40px;
+    }
+}
+
+.card__item {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+}
+
+.card__item:not(.card__item:last-of-type) {
+    margin-bottom: 30px;
+}
+
+.button {
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    padding: 20px 50px;
+    background: #6FCFFB;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    bottom: -27px;
+}
+
+.card__sign {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #A9A9A9;
+    display: none;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.075);
+        -ms-transform: scale(1.075);
+            transform: scale(1.075);
+    background-position: bottom 77px center;
+    z-index: 2;
+
+    & .card__badge {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    & .card__tooltip {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: -76px;
+    }
+
+    & .button {
+        background-color: #FD8D7B;
+        bottom: 47px;
+        -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+    }
+
+    & .card__sign {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+}
